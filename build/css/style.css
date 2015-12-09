@@ -77,16 +77,18 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
 .instafeed { width: 960px; height: 960px; }
 .instafeed__slide { position: relative; }
 .instafeed__img { line-height: 0; }
+.instafeed__img img { width: 100%; height: 100%; }
 .instafeed__text { position: absolute; bottom: 50px; color: #fff; width: 766px; left: 50%; margin-left: -388px; z-index: 2; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
-.instafeed__photo { width: 31px; height: 31px; overflow: hidden; -webkit-border-radius: 50%; border-radius: 50%; font-size: 0; display: inline-block; }
-.instafeed__topline { margin-bottom: 20px; text-align: justify; font-size: 0; }
+.instafeed__photo { width: 31px; height: 31px; -webkit-border-radius: 50%; border-radius: 50%; overflow: hidden; font-size: 0; display: inline-block; }
+.instafeed__photo img { max-width: 100%; height: auto; }
+.instafeed__topline { margin-bottom: -20px; margin-right: -20px; text-align: justify; font-size: 0; }
 .instafeed__topline:after { content: ""; width: 100%; height: 0; display: inline-block; }
-.instafeed__topline li { display: inline-block; vertical-align: top; }
+.instafeed__topline li { display: inline-block; vertical-align: top; padding-right: 20px; margin-bottom: 10px; }
 .instafeed__topline li a { color: inherit; }
-.instafeed__topline li span { font-size: 30px; display: inline-block; vertical-align: middle; line-height: 1; font-family: "raleway-medium", Arial, sans-serif; }
+.instafeed__topline li span { font-size: 30px; display: inline-block; vertical-align: middle; line-height: 1; text-shadow: 2px 1px 2px #000; font-family: "raleway-medium", Arial, sans-serif; }
 .instafeed__topline li .is-graph { display: inline-block; vertical-align: middle; margin-right: 15px; }
 .instafeed__topline .icon-insta { font-size: 31px; margin-top: -3px; }
-.instafeed__caption { font-size: 24px; min-height: 115px; font-family: "raleway-italic", Arial, sans-serif; }
+.instafeed__caption { margin-top: 20px; font-size: 24px; min-height: 115px; word-wrap: break-word; text-shadow: 2px 1px 2px #000; font-family: "raleway-italic", Arial, sans-serif; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 
