@@ -25,5 +25,9 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
 $(document).ready(function() {
 
 	// go js
-
+	$('.js-slider-instafeed').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false
+	});
 });
