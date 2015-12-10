@@ -25,9 +25,8 @@
 		overflow: hidden
 		font-size: 0  
 		display: inline-block
-		img
-			max-width: 100%
-			height: auto	
+		background-size: contain 
+		background-position: center	
 	&__topline
 		margin-bottom: -20px 
 		margin-right: -20px 
@@ -56,9 +55,16 @@
 				display: inline-block
 				vertical-align: middle
 				margin-right: 15px 
+			&.is-tag
+				span
+					text-transform: uppercase
 		.icon-insta
 			font-size: 31px 
 			margin-top: -3px 
+			text-shadow: 1px 1px 2px #000
+		.icon-watch
+			font-size: 31px 
+			text-shadow: 1px 1px 2px #000
 	&__caption
 		margin-top: 20px
 		font-size: 24px 
