@@ -19,7 +19,7 @@ $(document).ready(function() {
 					html += '<ul class="instafeed__topline">';
 					html += '<li class="is-tag"><i class="icon-insta is-graph"></i><span>#' + tag + '</span></li>';
 					html += '<li><a href="//www.instagram.com/' + item.user.username + '" target="_blank"><div class="instafeed__photo is-graph" style="background-image: url('+ item.user.profile_picture +')"></div><span>' + item.user.username + '</span></a></li>';
-					html += '<li><i class="icon-watch is-graph"></i><span>' + moment(date).startOf('day').fromNow() + '</span></li>';
+					html += '<li><i class="icon-watch is-graph"></i><span>' + moment(date).fromNow() + '</span></li>';
 					html += '</ul>';
 					html += '<div class="instafeed__caption">' + item.caption.text + '</div>';
 					html += '</div></div></div>';
