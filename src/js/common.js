@@ -7,7 +7,7 @@ $(document).ready(function() {
 
     (function loop(index) {
         if (index < tags.length) {
-            var $json = 'https://api.instagram.com/v1/tags/' + tags[index] + '/media/recent?access_token=1828642866.1677ed0.79d9608c2a8a46db9db35304d9ce43fa&callback=?'
+            var $json = 'https://api.instagram.com/v1/tags/' + tags[index] + '/media/recent?access_token=1828642866.1677ed0.79d9608c2a8a46db9db35304d9ce43fa&count=25&callback=?'
             $.getJSON($json, {
                     format: "json"
                 })
@@ -28,7 +28,6 @@ $(document).ready(function() {
                         html += '<div class="instafeed__caption">' + item.caption.text + '</div>';
                         html += '</div></div></div>';
                         slides.push(html)
-                        if (i === 19) return false;
                     })
                     loop(++index);
                 })
@@ -37,6 +36,7 @@ $(document).ready(function() {
     })(0);
 
     function done() {
+            // console.log(slides.length);
     	var amt 	= slides.length / 2,
     		part 	= slides.splice(amt),
     		result 	= [], halfOne = [], halfTwo = [];
@@ -46,7 +46,7 @@ $(document).ready(function() {
             slidesToScroll: 1,
             arrows: false,
             autoplay: true,
-            autoplaySpeed: 4500,
+            autoplaySpeed: 10000,
             fade: true,
             pauseOnHover: false
     	}
@@ -57,7 +57,8 @@ $(document).ready(function() {
 
         halfOne = result.splice(0, amt);
         halfTwo = result;
-
+        // console.log(halfOne.length);
+        // console.log(halfTwo.length);
         $('.js-instafeed1').html(halfOne.join(''));
         $('.js-instafeed1').slick(cfg);
 
