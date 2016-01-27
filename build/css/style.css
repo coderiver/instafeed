@@ -76,6 +76,8 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 @font-face { font-family: raleway-italic; src: url("fonts/raleway-italic.eot"); src: url("fonts/raleway-italic.eot?#iefix") format("embedded-opentype"), url("fonts/raleway-italic.woff2") format("woff2"), url("fonts/raleway-italic.woff") format("woff"), url("fonts/raleway-italic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
 
+body { background: #28292c; }
+
 .instafeed { width: 960px; height: 960px; }
 .instafeed__slide { position: relative; }
 .instafeed__img { line-height: 0; position: relative; }
