@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     // feed
-    var tags = ['dentsuatwork', 'dentsuaegisnetwork'],
+    var tags = ['dentsuatwork'],
     // var tags = ['day', 'night'],
     	slides = [];
 

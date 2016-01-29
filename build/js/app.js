@@ -3220,7 +3220,7 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
 $(document).ready(function() {
 
     // feed
-    var tags = ['dentsuatwork', 'dentsuaegisnetwork'],
+    var tags = ['dentsuatwork'],
     // var tags = ['day', 'night'],
     	slides = [];
 
