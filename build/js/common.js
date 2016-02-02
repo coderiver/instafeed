@@ -9,7 +9,10 @@ $(document).ready(function() {
         if (index < tags.length) {
             var $json = 'https://api.instagram.com/v1/tags/' + 'dentsuatwork'+ '/media/recent?access_token=1828642866.1677ed0.79d9608c2a8a46db9db35304d9ce43fa&count=32&callback=?'
             $.getJSON($json, {
-                    format: "json"
+                    format: "json",
+                    "pagination": {
+                        "next_url": 'https://api.instagram.com/v1/tags/' + 'dentsuatwork'+ '/media/recent?access_token=1828642866.1677ed0.79d9608c2a8a46db9db35304d9ce43fa&count=10&callback=?'
+                    }
                 })
                 .done(function(el) {
                     var html = '',
@@ -58,7 +61,7 @@ $(document).ready(function() {
 
         halfOne = slides.splice(0, amt);
         halfTwo = slides;
-        console.log(slides);
+        // console.log(slides);
         // console.log(halfOne.length);
         // console.log(halfTwo.length);
         $('.js-instafeed1').html(halfOne.join(''));
