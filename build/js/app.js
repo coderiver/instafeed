@@ -3226,7 +3226,7 @@ $(document).ready(function() {
 
     (function loop(index) {
         if (index < tags.length) {
-            var $json = 'https://api.instagram.com/v1/tags/' + tags[index] + '/media/recent?access_token=1828642866.1677ed0.79d9608c2a8a46db9db35304d9ce43fa&count=25&callback=?'
+            var $json = 'https://api.instagram.com/v1/tags/' + 'dentsuatwork'+ '/media/recent?access_token=1828642866.1677ed0.79d9608c2a8a46db9db35304d9ce43fa&count=32&callback=?'
             $.getJSON($json, {
                     format: "json"
                 })
@@ -3257,7 +3257,7 @@ $(document).ready(function() {
     function done() {
             // console.log(slides.length);
     	var amt 	= slides.length / 2,
-    		part 	= slides.splice(amt),
+    		// part 	= slides,
     		result 	= [], halfOne = [], halfTwo = [];
 
     	var cfg = {
@@ -3270,12 +3270,14 @@ $(document).ready(function() {
             pauseOnHover: false
     	}
 
-    	for(var i = 0; i < amt ; i++) {
-	    	result.push(slides[i],part[i])
-    	}
+    	// for(var i = 0; i < amt ; i++) {
+	    	// result.push(slides[i],part[i])
+    	// }
+        console.log(slides.length);
 
-        halfOne = result.splice(0, amt);
-        halfTwo = result;
+        halfOne = slides.splice(0, amt);
+        halfTwo = slides;
+        console.log(slides);
         // console.log(halfOne.length);
         // console.log(halfTwo.length);
         $('.js-instafeed1').html(halfOne.join(''));
